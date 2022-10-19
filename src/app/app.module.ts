@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddflightComponent } from './addflight/addflight.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewallflightComponent } from './viewallflight/viewallflight.component';
+import { HttpClientModule } from '@angular/common/http';
 
-const appRouter:Routes=[
+const appRoutes:Routes=[
   {
     path:"",component:AddflightComponent
+  },
+  {
+    path:"viewallflight",component:ViewallflightComponent
   }
 ]
 
@@ -17,12 +22,14 @@ const appRouter:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddflightComponent
+    AddflightComponent,
+    ViewallflightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
