@@ -10,4 +10,8 @@ export class ApiService {
   viewFlight=()=>{
     return this.http.get("http://localhost:8080/viewflight")
   }
+
+  addCourse=(data:any)=>{
+    return this.http.post("http://localhost:8080/addflight",data)
+  }
 }
