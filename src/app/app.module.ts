@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewallflightComponent } from './viewallflight/viewallflight.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SearchflightComponent } from './searchflight/searchflight.component';
 
 
 const appRoutes:Routes=[
@@ -17,6 +18,9 @@ const appRoutes:Routes=[
   },
   {
     path:"viewallflight",component:ViewallflightComponent
+  },
+  {
+    path:"searchflight",component:SearchflightComponent
   }
 ]
 
@@ -25,7 +29,8 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     AddflightComponent,
-    ViewallflightComponent
+    ViewallflightComponent,
+    SearchflightComponent
   ],
   imports: [
     BrowserModule,
