@@ -18,7 +18,17 @@ export class ViewallflightComponent implements OnInit {
       }
     )
    }
-
+deleteFlight=(id:any)=>{
+  let data={
+    "id":id
+  }
+  this.myapi.deleteFlight(data).subscribe(
+    (resp)=>{
+      alert("Deleted")
+    }
+  )
+  this.fetchData()
+}
 viewallFlight:any=[]
 
   ngOnInit(): void {
