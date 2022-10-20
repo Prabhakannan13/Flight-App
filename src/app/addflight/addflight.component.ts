@@ -23,7 +23,7 @@ export class AddflightComponent implements OnInit {
       "capacity":this.capacity
     }
     console.log(data)
-    this.api.addCourse(data).subscribe(
+    this.api.addFlight(data).subscribe(
       (data)=>{
          alert("Data inserted successfully")
       }
